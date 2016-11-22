@@ -1,0 +1,60 @@
+//
+// Site-wide global styles
+// --------------------------------------------------
+
+body {
+    background: @brand-white;
+}
+.list-group-sub .list-group-item {
+  padding: 10px 30px 10px 30px;
+}
+
+.content {
+    // Fix layout of form items
+    .form-horizontal {
+        margin: 0 15px;
+        & > p {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+}
+/* 
+ * header styles
+ */
+.header {
+    .sub-header {
+        background: @brand-secondary;
+        color: @gray-lighter;
+        padding: @grid-gutter-width/10 0;
+        margin-bottom: @grid-gutter-width/2;
+    }
+}
+.navbar-small {
+    margin: 0;
+    min-height: 0;
+    li a {
+        padding: 0 @grid-gutter-width/2;
+    }
+}
+
+/*
+ * Core Styles
+ */
+.main,
+.content-container {
+	min-height: 400px;
+}
+
+/* 
+ * Footer Styling
+ */
+.footer {
+    padding: @grid-gutter-width/2 0;
+	background: @brand-secondary;
+	color: @gray-lighter;
+    margin-top: @grid-gutter-width;
+    .container {
+        background: transparent;
+    }
+}

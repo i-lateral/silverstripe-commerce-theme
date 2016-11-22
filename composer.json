@@ -1,0 +1,26 @@
+{
+    "name": "makreig/silverstripe-bootstrap-theme",
+    "description": "A re-write of a SilverStripe Bootstrap theme that incorporates HTML5 Boilerplate, Twitter Bootstrap, and Font Awesome",
+    "type": "silverstripe-theme",
+    "keywords": ["silverstripe", "theme"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Mark Anderson",
+            "homepage": "http://ilateral.co.uk"
+        }
+    ],
+    "require": {
+        "composer/installers": "*",
+        "silverstripe/framework": ">=3.0"
+    },
+    "support": {
+        "issues": "https://github.com/jeffwhitfield/silverstripe-bootstrap-theme/issues"
+    },
+    "extra": {
+        "installer-name": "bootstrap"
+    },
+    "replace": {
+        "jeffwhitfield/silverstripe-bootstrap-theme": "*"
+    }
+}
