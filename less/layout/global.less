@@ -24,10 +24,25 @@ body {
  */
 .header {
     .sub-header {
-        background: @brand-secondary;
-        color: @gray-lighter;
         padding: @grid-gutter-width/10 0;
         margin-bottom: @grid-gutter-width/2;
+    }
+    #CatNav{
+        &.affix-top {
+            .affix-only {
+                display: none;
+            }
+        }
+        &.affix {
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+        }
+        .navbar-brand {
+            padding: (@navbar-height - 50px)/2 @grid-gutter-width/2;
+            margin: 0;
+        }
     }
 }
 .navbar-small {
@@ -52,11 +67,48 @@ body {
  */
 .footer {
     padding: @grid-gutter-width/2 0;
-	background: @brand-secondary;
+	background: @brand-primary;
 	color: @gray-lighter;
     margin-top: @grid-gutter-width;
     .container {
         background: transparent;
+    }
+    a {
+        color: @brand-white;
+        &:hover {
+            color: @brand-black;
+        }
+    }
+    .socialnav {
+        ul {
+            padding: 0;
+            margin: 0 -5px;
+            li {
+                display: inline-block;
+                margin: 0 5px;
+                a {
+                    display: inline-block;
+                    .square(24px);
+                    line-height: 24px;
+                    text-align: center;
+                    color: @brand-primary;
+                    background: @brand-white;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    &:hover {
+                        background: @brand-black;
+                        color: @brand-white;
+                    }
+                    img {
+                        .square(24px);
+                        float: left;
+                    }
+                    .fa img {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -68,4 +120,25 @@ body {
 }
 .navbar .navbar-nav:first-child {
     margin-left: -(@grid-gutter-width/2);
+}
+#catalogue-product-image {
+    padding: 3px;
+    border: 1px solid @gray-lighter;
+    text-align: center;
+    margin-bottom: @grid-gutter-width/2;
+    img {
+        margin: 0 auto;
+    }
+}
+.thumbs {
+    margin: 0 -5px;
+    .thumb {
+        float: left;
+        margin: 5px;
+        a {
+            padding: 3px;
+            border: 1px solid @gray-lighter;
+            display: block;
+        }
+    }
 }

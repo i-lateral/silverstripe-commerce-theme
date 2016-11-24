@@ -4,18 +4,18 @@
 // Be sure to include any overrides to Bootstrap and/or Font Awesome variables.
 
 // Font locations
-@icon-font-path:          "../../../lwt/bower_components/bootstrap/fonts/";
-@fa-font-path:        "../../../lwt/bower_components/font-awesome/fonts";
+@icon-font-path:          "../../../bootstrap-commerce/bower_components/bootstrap/fonts/";
+@fa-font-path:        "../../../bootstrap-commerce/bower_components/font-awesome/fonts";
 
-@brand-primary:         #428bca;
-@brand-secondary:       @gray-dark;
+@brand-white: #fff;
+@brand-black: #000;
+
+@brand-primary:         #54555e;
+@brand-secondary:       @brand-black;
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
-
-@brand-white: #fff;
-@brand-black: #000;
 
 /*
 #D3E2E8
@@ -24,3 +24,34 @@
 #666666
 #44618B
 */
+
+//** Background color for `<body>`.
+@body-bg:               @brand-white;
+//** Global text color on `<body>`.
+@text-color:            @gray-light;
+
+//** Global textual link color.
+@link-color:            @brand-black;
+//** Link hover color set via `darken()` function.
+@link-hover-color:      darken(@link-color, 15%);
+//** Link hover decoration.
+@link-hover-decoration: underline;
+
+
+// Navbar
+@navbar-default-color:             @brand-white;
+@navbar-default-bg:                @brand-primary;
+// Navbar links
+@navbar-default-link-color:                @brand-white;
+@navbar-default-link-hover-color:          @brand-white;
+@navbar-default-link-hover-bg:             @brand-secondary;
+@navbar-default-link-active-color:         @navbar-default-link-color;
+@navbar-default-link-active-bg:            @brand-secondary;
+
+@pagination-hover-color:               @brand-white;
+@pagination-hover-bg:                  @brand-primary;
+@pagination-hover-border:              @brand-primary;
+
+@pagination-active-color:              @brand-white;
+@pagination-active-bg:                 @brand-primary;
+@pagination-active-border:             @brand-primary;

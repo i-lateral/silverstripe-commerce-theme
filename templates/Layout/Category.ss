@@ -25,10 +25,10 @@
                         <div class="unit-25 unit size1of4 col-sm-3 catalogue-list-child">
                             <div class="panel panel-default">
                                 <div class="panel-body">
-                                    <p><a href="$Link"><img class="img-responsive" src="$SortedImages.First.CroppedImage(400,400).URL" alt="$Title"></a></p>
-                                    <h2><a href="$Link">$Title</a></h2>
-                                    <p>$Content.Summary(30,0)</p>
-                                    <p class="h3">
+                                    <p class="product-image"><a href="$Link"><img class="img-responsive" src="$SortedImages.First.CroppedImage(400,400).URL" alt="$Title"></a></p>
+                                    <h2 class="product-title"><a href="$Link">$Title</a></h2>
+                                    <p class="product-summary">$Content.Summary(30,0)</p>
+                                    <p class="h3 product-price text-center">
                                         <span class="price label label-green label-success big">                            
                                             <% if $IncludesTax %>
                                                 {$PriceAndTax.nice}
@@ -44,41 +44,44 @@
                                         <% end_if %>
                                     </p>
                                 </div>
+                                <a class="btn btn-primary btn-block" href="$Link">View</a>
                             </div>
                         </div>
 
-                        <% if $MultipleOf(4) %></div><div class="units-row line catalogue-list"><% end_if %>
+                        <% if $MultipleOf(4) %></div><div class="units-row row line catalogue-list"><% end_if %>
                     <% end_loop %>
                 </div>
 
                 <% with $PaginatedAllProducts(8) %>
-                    <% if $MoreThanOnePage %>
-                        <ul class="pagination line">
-                            <% if $NotFirstPage %>
-                                <li class="prev unit">
-                                    <a class="prev" href="$PrevLink">Prev</a>
-                                </li>
-                            <% end_if %>
-
-                            <% loop $Pages %>
-                                <% if $CurrentBool %>
-                                    <li class="unit"><span>$PageNum</span></li>
-                                <% else %>
-                                    <% if $Link %>
-                                        <li class="unit"><a href="$Link">$PageNum</a></li>
-                                    <% else %>
-                                        <li class="unit">...</li>
-                                    <% end_if %>
+                    <div class="text-center">
+                        <% if $MoreThanOnePage %>
+                            <ul class="pagination line">
+                                <% if $NotFirstPage %>
+                                    <li class="prev unit">
+                                        <a class="prev" href="$PrevLink">Prev</a>
+                                    </li>
                                 <% end_if %>
-                            <% end_loop %>
 
-                            <% if $NotLastPage %>
-                                <li class="unit next">
-                                    <a class="next" href="$NextLink">Next</a>
-                                </li>
-                            <% end_if %>
-                        </ul>
-                    <% end_if %>
+                                <% loop $Pages %>
+                                    <% if $CurrentBool %>
+                                        <li class="unit active"><span>$PageNum</span></li>
+                                    <% else %>
+                                        <% if $Link %>
+                                            <li class="unit"><a href="$Link">$PageNum</a></li>
+                                        <% else %>
+                                            <li class="unit">...</li>
+                                        <% end_if %>
+                                    <% end_if %>
+                                <% end_loop %>
+
+                                <% if $NotLastPage %>
+                                    <li class="unit next">
+                                        <a class="next" href="$NextLink">Next</a>
+                                    </li>
+                                <% end_if %>
+                            </ul>
+                        <% end_if %>
+                    </div>
                 <% end_with %>
 
             <% end_if %>

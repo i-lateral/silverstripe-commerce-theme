@@ -2,7 +2,7 @@
     <div class="units-row row users-account line">
         <% include Users_Profile_SideBar %>
 
-        <div class="content-container typography unit-75 col-xs-12 col-sm-8">
+        <div class="content-container typography unit-75 col-xs-12 col-sm-9">
             <% if $Order %><% with $Order %>
                 <h1><%t Orders.Order "Order" %>: $OrderNumber</h1>
                 <div class="units-row-end row">

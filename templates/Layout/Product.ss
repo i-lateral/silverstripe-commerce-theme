@@ -9,7 +9,7 @@
         <div class="unit-50 unit size1of2 col-xs-12 col-sm-6 catalogue-product-images">
             <div id="catalogue-product-image">
                 <a href="#" data-toggle="modal" data-target="#CarouselModal">
-                    $ProductImage.PaddedImage(500,500)
+                    <img class="img-responsive" src="$ProductImage.PaddedImage(600,600).URL" alt="$ProductImage.Title">
                 </a>
             </div>
 
@@ -17,9 +17,11 @@
                 <% if $Images.exists %>
                     <div class="thumbs">
                         <% loop $SortedImages %>
-                            <a href="{$Top.Link('iid')}/$ID#catalogue-product-image">
-                                $PaddedImage(75,75)
-                            </a>
+                            <div class="thumb">
+                                <a href="{$Top.Link('iid')}/$ID#catalogue-product-image">
+                                    <img class="img-responsive" src="$PaddedImage(75,75).URL" alt="$PaddedImage(75,75).Title">
+                                </a>
+                            </div>
                         <% end_loop %>
                     </div>
                     <div class="modal fade" id="CarouselModal" tabindex="-1" role="dialog">

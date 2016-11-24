@@ -39,18 +39,31 @@
         </nav><!--/.nav-collapse -->
       </div>
     </div>
-    <div class="navbar navbar-default">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+    <div class="navbar navbar-default category-nav" id="CatNav">
+      <div class="container">
+        <div class="row">
+        <p class="navbar-brand affix-only">
+          <a href="$BaseHref">
+            <% if $SiteConfig.Logo %>
+              <img class="img-responsive" src="$SiteConfig.Logo.setHeight(50).URL" alt="$SiteConfig.Title">
+            <% else %>
+              $SiteConfig.Title
+            <% end_if %>
+          </a>
+        </p>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <nav class="nav navbar-nav navbar-collapse collapse" role="navigation">
+            <% include CatalogueNav %>
+          </nav><!--/.nav-collapse -->
+        </div>
       </div>
-      <nav class="nav navbar-nav navbar-collapse collapse" role="navigation">
-        <% include CatalogueNav %>
-      </nav><!--/.nav-collapse -->
     </div>
   </div>
 </header>

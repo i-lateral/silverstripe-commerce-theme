@@ -17,7 +17,7 @@
 							<br />$PhoneNumber
 						<% end_if %>
 						<% if $Email %>
-							<br />$Email
+							<br /><a href="mailto:{$Email}">$Email</a>
 						<% end_if %>
 					</p>
 				<% end_if %>
