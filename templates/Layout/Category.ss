@@ -23,24 +23,28 @@
                 <div class="units-row row line catalogue-list">
                     <% loop $PaginatedAllProducts(8) %>
                         <div class="unit-25 unit size1of4 col-sm-3 catalogue-list-child">
-                            <p><a href="$Link"><img class="img-responsive" src="$SortedImages.First.CroppedImage(400,400).URL" alt="$Title"></a></p>
-                            <h2><a href="$Link">$Title</a></h2>
-                            <p>$Content.Summary(30,0)</p>
-                            <p class="h3">
-                                <span class="price label label-green label-success big">                            
-                                    <% if $IncludesTax %>
-                                        {$PriceAndTax.nice}
-                                    <% else %>
-                                        {$Price.nice}
-                                    <% end_if %>
-                                </span>
-                                
-                                <% if TaxString %>
-                                    <small class="tax"> 
-                                        &nbsp;{$TaxString}
-                                    </small>
-                                <% end_if %>
-                            </p>
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <p><a href="$Link"><img class="img-responsive" src="$SortedImages.First.CroppedImage(400,400).URL" alt="$Title"></a></p>
+                                    <h2><a href="$Link">$Title</a></h2>
+                                    <p>$Content.Summary(30,0)</p>
+                                    <p class="h3">
+                                        <span class="price label label-green label-success big">                            
+                                            <% if $IncludesTax %>
+                                                {$PriceAndTax.nice}
+                                            <% else %>
+                                                {$Price.nice}
+                                            <% end_if %>
+                                        </span>
+                                        
+                                        <% if TaxString %>
+                                            <small class="tax"> 
+                                                &nbsp;{$TaxString}
+                                            </small>
+                                        <% end_if %>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
                         <% if $MultipleOf(4) %></div><div class="units-row line catalogue-list"><% end_if %>

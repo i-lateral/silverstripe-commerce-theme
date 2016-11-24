@@ -10,8 +10,8 @@
 	    <% end_loop %>
 	    <ul class="list-group list-group-flush">
 			<% loop $Menu(2) %>
-			<li class="$LinkingMode list-group-item">
-		        <a href="$Link" title="$Title.XML"<% if LinkOrCurrent = current %> class=" active"<% end_if %>>$MenuTitle.XML</a>
+			<li class="$LinkingMode list-group-item<% if LinkOrCurrent = current %> active<% end_if %>">
+		        <a href="$Link" title="$Title.XML">$MenuTitle.XML</a>
 				<% if $Children %>
 					<ul class="list-group list-group-flush list-group-sub">
 					<% loop $Children %>

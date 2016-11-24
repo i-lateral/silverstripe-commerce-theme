@@ -1,8 +1,11 @@
     <ul class="nav navbar-nav navbar-right users-accountnav">
         <% if $CurrentMember %>
             <li class="details">
-                <% _t("Users.HELLO", "Hi") %>
-                $CurrentMember.FirstName</li>
+                <span>
+                    <% _t("Users.HELLO", "Hi") %>
+                    $CurrentMember.FirstName
+                </span>
+            </li>
             <li class="account">
                 <a href="{$BaseHref}users/account">
                     <% _t("Users.MYACCOUNT", "My account") %>

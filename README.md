@@ -1,13 +1,13 @@
-# SilverStripe Bootstrap Theme v1.2.0
+# SilverStripe Bootstrap Commerce Theme v0.0.1
 
-A SilverStripe Bootstrap theme that incorporates Twitter Bootstrap and Font Awesome
+A SilverStripe theme based on the Bootstrap theme built with compatability with our commerce module.
 
 ## Installation ##
 
- * Install add-on via Composer (`composer require jeffwhitfield/silverstripe-bootstrap-theme dev-master`) OR download a copy from the repository.
+ * Install add-on via Composer (`composer require i-lateral/silverstripe-commerce-theme master`) OR download a copy from the repository.
  * Create a folder of your choice within the `themes/` directory of your SilverStripe project to store your custom theme in.
  * If you've downloaded the add-on, copy all files from the repository into this directory.
- * If you've installed the add-on using Composer, copy all the files from the `themes/bootstrap` directory into your custom theme directory.
+ * If you've installed the add-on using Composer, copy all the files from the `themes/bootstrap-commerce` directory into your custom theme directory.
  * Run `bower install` within your theme directory.
  * Update the `init()` method in your default page controller and add additional methods.
 
@@ -42,6 +42,7 @@ Lastly, you'll need to update your default Page class (`/mysite/code/Page.php`) 
             'site.js',
             array(
                 $ThemeDir.'/javascript/libs.js',
+                $ThemeDir.'/bower_components/matcheight/dist/jquery.matchHeight-min.js',
                 $ThemeDir.'/bower_components/bootstrap/js/affix.js',
                 $ThemeDir.'/bower_components/bootstrap/js/alert.js',
                 $ThemeDir.'/bower_components/bootstrap/js/button.js',
@@ -79,10 +80,6 @@ In addition to the `init()` method changes, I recommend adding one additional me
     }
 ```
 This a simple Copyright method that is used in the footer template to return a full copyright for the current year.
-
-## Bugtracker ##
-
-Bugs are tracked on [github.com](https://github.com/jeffwhitfield/silverstripe-bootstrap-theme/issues). Feel free to offer suggestions and contribute to the codebase.
 
 ## Links ##
 

@@ -1,5 +1,5 @@
 {
-    "name": "makreig/silverstripe-bootstrap-theme",
+    "name": "i-lateral/silverstripe-commerce-theme",
     "description": "A re-write of a SilverStripe Bootstrap theme that incorporates HTML5 Boilerplate, Twitter Bootstrap, and Font Awesome",
     "type": "silverstripe-theme",
     "keywords": ["silverstripe", "theme"],
@@ -18,7 +18,7 @@
         "issues": "https://github.com/jeffwhitfield/silverstripe-bootstrap-theme/issues"
     },
     "extra": {
-        "installer-name": "bootstrap"
+        "installer-name": "bootstrap-commerce"
     },
     "replace": {
         "jeffwhitfield/silverstripe-bootstrap-theme": "*"
