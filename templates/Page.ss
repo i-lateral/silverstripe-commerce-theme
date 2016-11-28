@@ -56,7 +56,7 @@
 	$LoadThemeAssets
     <script src="{$ThemeDir}/bower_components/modernizr/modernizr.js"></script>
 </head>
-<body>
+<body id="$ClassName">
 <% include Header %>
 
 <!--[if lt IE 8]>
