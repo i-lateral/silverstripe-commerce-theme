@@ -26,10 +26,9 @@
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <p class="product-image"><a href="$Link"><img class="img-responsive" src="$SortedImages.First.CroppedImage(400,400).URL" alt="$Title"></a></p>
-                                    <h2 class="product-title"><a href="$Link">$Title</a></h2>
-                                    <p class="product-summary">$Content.Summary(30,0)</p>
+                                    <h2 class="product-title text-center"><a href="$Link">$Title</a></h2>
                                     <p class="h3 product-price text-center">
-                                        <span class="price label label-green label-success big">                            
+                                        <span class="price big">                            
                                             <% if $IncludesTax %>
                                                 {$PriceAndTax.nice}
                                             <% else %>
@@ -38,8 +37,9 @@
                                         </span>
                                         
                                         <% if TaxString %>
+                                            <br />
                                             <small class="tax"> 
-                                                &nbsp;{$TaxString}
+                                                {$TaxString}
                                             </small>
                                         <% end_if %>
                                     </p>

@@ -4,6 +4,7 @@
         $('.panel .product-image').matchHeight();
         $('.panel .product-title').matchHeight();
         $('.panel .product-summary').matchHeight();
+        $('.panel .product-price').matchHeight();
         $('.panel').matchHeight();
 
         $('#back-to-top a').click(function(){

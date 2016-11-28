@@ -27,6 +27,11 @@ body {
         padding: @grid-gutter-width/10 0;
         margin-bottom: @grid-gutter-width/2;
     }
+    .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+        background: transparent;
+        color: @link-color;
+        text-decoration: underline;
+    }
     #CatNav{
         &.affix-top {
             .affix-only {
