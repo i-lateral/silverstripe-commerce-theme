@@ -81,6 +81,17 @@ In addition to the `init()` method changes, I recommend adding one additional me
 ```
 This a simple Copyright method that is used in the footer template to return a full copyright for the current year.
 
+
+**Note: to get the account menu to show in the footer, the following unction needs to be added to siteconfig.**
+...
+    public function getAccountMenu()
+    {
+        $controller = Users_Account_Controller::create();
+
+        return $controller->getAccountMenu();
+    }
+...
+
 ## Links ##
 
  * [SilverStripe](http://www.silverstripe.org)

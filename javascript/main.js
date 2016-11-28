@@ -15,7 +15,7 @@
 
         $('#CatNav').affix({
         offset: {
-            top: offset.top,
+            top: offset.top - 25,
             bottom: function () {
                 return (this.bottom = $('.footer').outerHeight(true))
             }

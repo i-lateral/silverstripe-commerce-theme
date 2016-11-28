@@ -35,7 +35,7 @@
                 <h3>My account</h3>
                 <nav class="nav secondary">
                     <ul class="nav nav-pills nav-stacked">
-                        <% loop $AccountMenu %>
+                        <% loop $SiteConfig.AccountMenu %>
                             <li>
                                 <a href="$Link" class="$LinkingMode">
                                     <span class="text">$Title</span>
