@@ -74,7 +74,6 @@
         <div class="unit-50 unit size1of2 col-xs-12 col-sm-6 catalogue-product-summary">
             <p class="h3">
                 <span class="price">
-                    <span class="title"><%t Catalogue.Price "Price" %>:</span>
                     <span class="value">
                         <% if $IncludesTax %>
                             {$PriceAndTax.nice}
