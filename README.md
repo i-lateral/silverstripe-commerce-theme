@@ -15,15 +15,38 @@ For more information about installation, see Configuration below.
 
 ## Configuration ##
 
-The default *bootstrap* theme includes all CSS, javascript, LESS, and template files for the site. It is recommended that you create a new theme and copy all the files from the *bootstrap* directory into your own custom theme directory. This way, if changes are made to the SilverStripe Bootstrap Theme add-on, you'll have a much easier time updating your theme.
+The default *bootstrap* theme includes all CSS, javascript, LESS, and template files for the site.
+It is recommended that you create a new theme and copy all the files from the *bootstrap* directory
+into your own custom theme directory. This way, if changes are made to the SilverStripe Bootstrap
+Theme add-on, you'll have a much easier time updating your theme.
 
-In order to use this theme you'll need to do a few things to get started with it:
+By default the theme makes use of combined and minified CSS and JS. If you want to customise the
+apperance you should add your custom CSS to the custom.css file in the CSS directory.  
 
-First, you'll need to run the `bower install` command from within your theme directory. The theme requires that you use Bower to manage jQuery, Modernizr, Bootstrap, and Font Awesome. The benefit of this is that, should any of these components change, you can upgrade them yourself without having to rely on the SilverStripe Bootstrap Theme add-on to be updated. If you require specific versions for these components, update the `bower.json` config file prior to installing the components.
+If you want to work with the core less files and fully customise this theme, you'll need to do a
+few things to get started:
 
-Second, you'll need to run an initial compilation of the LESS files prior to viewing a page. To compile CSS from LESS, you'll need to provide your own LESS pre-processor. For Mac users, [CodeKit](http://incident57.com/codekit/) is recommended. For Windows users, give [Prepros](http://alphapixels.com/prepros/) a try. Be sure to set it so that the resulting CSS files are minified/compressed for production use.
+First, you'll need to run the `bower install` command from within your theme directory. The theme
+requires that you use Bower to manage jQuery, Modernizr, Bootstrap, and Font Awesome. The benefit
+of this is that, should any of these components change, you can upgrade them yourself without
+having to rely on the SilverStripe Bootstrap Theme add-on to be updated. If you require specific
+versions for these components, update the `bower.json` config file prior to installing the
+components.
 
-Lastly, you'll need to update your default Page class (`/mysite/code/Page.php`) to allow SilverStripe to control the optimization of all the javascript and CSS. To do this, update the `init()` method in your `Page_Controller` or (whatever default controller you'll be using) with the following code:
+Second, you'll need to run an initial compilation of the LESS files prior to viewing a page. To
+compile CSS from LESS, you'll need to provide your own LESS pre-processor.
+
+For Mac users, [CodeKit](http://incident57.com/codekit/) is recommended.
+For Windows users, give [Prepros](http://alphapixels.com/prepros/) a try.
+You can also use the [lesscompiler module](https://github.com/i-lateral/silverstripe-lesscompiler)
+for SilverStripe
+
+Be sure to set it so that the resulting CSS files are minified/compressed for production use.
+
+Lastly, you'll need to update your default Page class (`/mysite/code/Page.php`) to allow
+SilverStripe to control the optimization of all the javascript and CSS. To do this, update the
+`init()` method in your `Page_Controller` or (whatever default controller you'll be using) with
+the following code:
 
 ```php
     public function init() {
@@ -42,7 +65,7 @@ Lastly, you'll need to update your default Page class (`/mysite/code/Page.php`) 
             'site.js',
             array(
                 $ThemeDir.'/javascript/libs.js',
-                $ThemeDir.'/bower_components/matcheight/dist/jquery.matchHeight-min.js',
+                $ThemeDir.'/bower_components/matchheight/dist/jquery.matchHeight-min.js',
                 $ThemeDir.'/bower_components/bootstrap/js/affix.js',
                 $ThemeDir.'/bower_components/bootstrap/js/alert.js',
                 $ThemeDir.'/bower_components/bootstrap/js/button.js',
