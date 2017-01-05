@@ -72,25 +72,28 @@
 		<script src="{$ThemeDir}/bower_components/modernizr/modernizr.js"></script>
 	</head>
 	<body id="$ClassName">
-	<% include Header %>
+		<% include Header %>
 
-	<!--[if lt IE 8]>
-	<div class="container chromeframe">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="alert alert-error">
-				You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+		<!--[if lt IE 8]>
+		<div class="container chromeframe">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="alert alert-error">
+					You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<![endif]-->
+		<![endif]-->
 
-	$Layout
+		$Layout
 
-	<% include Footer %>
+		<% include Footer %>
 
-	<div id="back-to-top" data-spy="affix" data-offset-top="100"><a href="#" class="btn btn-default"><i class="fa fa-chevron-up"><span class="hide">Back to Top</span></i></a></div>
-
+		<div id="back-to-top" data-spy="affix" data-offset-top="100">
+			<a href="#" class="btn btn-default">
+				<i class="fa fa-chevron-up"><span class="hide">Back to Top</span></i>
+			</a>
+		</div>
 	</body>
 </html>
