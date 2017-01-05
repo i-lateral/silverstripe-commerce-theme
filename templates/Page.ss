@@ -53,7 +53,16 @@
     <script>
     themedir = '{$ThemeDir}';
     </script>
+
 	$LoadThemeAssets
+
+	<% require themedCSS("site") %>
+
+	<% require javascript("themes/bootstrap-commerce/javascript/libs.js") %>
+	<% require javascript("themes/bootstrap-commerce/bower_components/matchheight/dist/jquery.matchHeight-min.js") %>
+	<% require javascript("themes/bootstrap-commerce/bower_components/bootstrap/dist/js/bootstrap.min.js") %>
+	<% require javascript("themes/bootstrap-commerce/javascript/main.js") %>
+
     <script src="{$ThemeDir}/bower_components/modernizr/modernizr.js"></script>
 </head>
 <body id="$ClassName">
