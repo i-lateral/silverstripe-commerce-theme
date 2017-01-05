@@ -58,6 +58,7 @@
 
 	<% require themedCSS("site") %>
 
+	<% require javascript("themes/bootstrap-commerce/bower_components/jquery/dist/jquery.min.js") %>
 	<% require javascript("themes/bootstrap-commerce/javascript/libs.js") %>
 	<% require javascript("themes/bootstrap-commerce/bower_components/matchheight/dist/jquery.matchHeight-min.js") %>
 	<% require javascript("themes/bootstrap-commerce/bower_components/bootstrap/dist/js/bootstrap.min.js") %>
