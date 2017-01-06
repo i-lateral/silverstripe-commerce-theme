@@ -1,5 +1,5 @@
 <% if Title %>
-<div id="$Name" class="form-group<% if extraClass %> $extraClass<% end_if %>">
+<div id="$HolderID" class="form-group field<% if extraClass %> $extraClass<% end_if %>">
 	<% if Title %><label class="control-label" for="$ID">$Title</label><% else %><label class="control-label" for="$ID"></label><% end_if %>
 	<div class="controls">
 		$Field

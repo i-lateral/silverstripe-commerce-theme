@@ -5,5 +5,5 @@
 		$Value
 	</span>
 <% else %>
-	<input $.addExtraClass('form-control').AttributesHTML />
+	<input $addExtraClass('form-control').AttributesHTML />
 <% end_if %>

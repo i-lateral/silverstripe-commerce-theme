@@ -1,4 +1,4 @@
-<ul id="$ID" class="list-unstyled $extraClass"<% if Description %> title="$Description"<% end_if %>>
+<ul $addExtraClass("list-unstyled").AttributesHTML>
 	<% if Options.Count %>
 		<% loop Options %>
 			<li class="checkbox $Class">
