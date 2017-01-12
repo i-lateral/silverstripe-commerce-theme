@@ -5,8 +5,8 @@
 
     <h1>$Title</h1>
 
-    <div class="units-row row line">
-        <div class="unit-50 unit size1of2 col-xs-12 col-sm-6 catalogue-product-images">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 catalogue-product-images">
             <div id="catalogue-product-image">
                 <a href="#" data-toggle="modal" data-target="#CarouselModal">
                     <img class="img-responsive" src="$ProductImage.PaddedImage(600,600).URL" alt="$ProductImage.Title">
@@ -71,7 +71,7 @@
                 <% end_if %>
             </div>
         </div>
-        <div class="unit-50 unit size1of2 col-xs-12 col-sm-6 catalogue-product-summary">
+        <div class="col-xs-12 col-sm-6 catalogue-product-summary">
             <p class="h3">
                 <span class="price">
                     <span class="value">
@@ -107,12 +107,14 @@
 
         <h2><%t Catalogue.RelatedProducts "Related Products" %></h2>
 
-        <div class="units-row row catalogue-related-products line">
+        <div class="row catalogue-related-products">
             <% loop $SortedRelatedProducts %>
-                <% include ProductSummary %>
+                <div class="col-sm-3 catalogue-list-child">
+                    <% include ProductSummary %>
+                </div>
 
-                <% if $MultipleOf(5) && not $Last %>
-                    </div><div class="units-row row catalogue-related-products line">
+                <% if $MultipleOf(4) && not $Last %>
+                    </div><div class="row catalogue-related-products">
                 <% end_if %>
             <% end_loop %>
         </div>

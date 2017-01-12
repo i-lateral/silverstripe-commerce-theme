@@ -1,13 +1,11 @@
 <div class="container">
     <div class="row">
-        <% include SideBar %>
-
-        <div class="catalogue-content-container typography <% if $Menu(2) %>unit size3of4 unit-75 col-md-9 <% end_if %> col-xs-12">
+        <div class="catalogue-content-container typography col-xs-12">
             <% if Level(2) %><p>$Breadcrumbs</p><% end_if %>
 
             <h1>$Title</h1>
 
-            <div class="units-row catalogue-list">
+            <div class="catalogue-list">
                 <% if $EnabledChildren.exists %>
                     <p>
                         <strong><%t Catalogue.FilterBy "Filter by" %>:</strong>
@@ -20,35 +18,13 @@
             </div>
 
             <% if $PaginatedAllProducts(8).exists %>
-                <div class="units-row row line catalogue-list">
+                <div class="row line catalogue-list">
                     <% loop $PaginatedAllProducts(8) %>
-                        <div class="unit-25 unit size1of4 col-sm-3 catalogue-list-child">
-                            <div class="panel panel-default">
-                                <div class="panel-body">
-                                    <p class="product-image"><a href="$Link"><img class="img-responsive" src="$SortedImages.First.CroppedImage(400,400).URL" alt="$Title"></a></p>
-                                    <h2 class="product-title text-center"><a href="$Link">$Title</a></h2>
-                                    <p class="h3 product-price text-center">
-                                        <span class="price big">                            
-                                            <% if $IncludesTax %>
-                                                {$PriceAndTax.nice}
-                                            <% else %>
-                                                {$Price.nice}
-                                            <% end_if %>
-                                        </span>
-                                        
-                                        <% if TaxString %>
-                                            <br />
-                                            <small class="tax"> 
-                                                {$TaxString}
-                                            </small>
-                                        <% end_if %>
-                                    </p>
-                                </div>
-                                <a class="btn btn-primary btn-block" href="$Link">View</a>
-                            </div>
+                        <div class="col-sm-3 catalogue-list-child">
+                            <% include ProductSummary %>
                         </div>
 
-                        <% if $MultipleOf(4) %></div><div class="units-row row line catalogue-list"><% end_if %>
+                        <% if $MultipleOf(4) %></div><div class="row catalogue-list"><% end_if %>
                     <% end_loop %>
                 </div>
 
