@@ -39,7 +39,16 @@
 								</div><% end_if %>
 							</td>
 							<td class="quantity">
-								<input type="text" name="Quantity_{$Key}" value="{$Quantity}" />
+								<input
+									type="text"
+									name="Quantity_{$Key}"
+									value="{$Quantity}"
+									class="form-control"
+									<% if $Locked %>
+									title="<%t Checkout.ItemCannotBeEdited "This item cannot be edited" %>"
+									readonly
+									<% end_if %>
+								/>
 							</td>
 							<td class="price">
 								{$Price.Nice}
