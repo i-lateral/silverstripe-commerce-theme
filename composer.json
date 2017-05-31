@@ -16,7 +16,7 @@
         "i-lateral/silverstripe-commerce": "*",
         "i-lateral/silverstripe-socialnav": "*",
         "i-lateral/silverstripe-users": "1.*",
-		"silverstripe/siteconfig": "3.3.*@stable"
+		"silverstripe/siteconfig": ">=3.2"
     },
     "support": {
         "issues": "https://github.com/jeffwhitfield/silverstripe-bootstrap-theme/issues"
