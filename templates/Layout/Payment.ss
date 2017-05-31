@@ -4,7 +4,7 @@
 
     <div class="checkout-payment-summary row">
         <% with $ShoppingCart %>
-            <div class="col-md-4 col-xs-12">
+            <div class="col-md-3 col-xs-12">
                 <h2><%t Checkout.Order "Order" %></h2>
                 <p>
                     <strong><%t Checkout.SubTotal "Sub Total" %>:</strong>
@@ -36,7 +36,7 @@
         <% end_with %>
     
         <% with $Order %>
-            <div class="col-xs-12 col-md-4">
+            <div class="col-xs-12 col-md-3">
                 <h2><%t Checkout.BillingDetails "Billing Details" %></h2>
                 <p>
                     <% if $Company %>
@@ -49,13 +49,14 @@
                     $Address1<br/>
                     <% if $Address2 %>$Address2<br/><% end_if %>
                     $City<br/>
+                    <% if $State %>$State<br/><% end_if %>
                     <strong><%t Checkout.PostCode "Post Code" %>:</strong> $PostCode<br/>
                     <strong><%t Checkout.Country "Country" %>:</strong> <% if $CountryFull %>$CountryFull<% else %>$Country<% end_if %>
                 </p>
             </div>
 
             <% if $Top.ShoppingCart.isDeliverable %>
-                <div class="col-xs-12 col-md-4">
+                <div class="col-xs-12 col-md-3">
                     <h2><%t Checkout.DeliveryDetails "Delivery Details" %></h2>
                     <% if $Top.ShoppingCart.isCollection %>
                         <p><%t Checkout.ItemsReservedInstore "Your items will be held instore until you collect them" %></p>
@@ -69,6 +70,7 @@
                             $DeliveryAddress1<br/>
                             <% if $DeliveryAddress2 %>$DeliveryAddress2<br/><% end_if %>
                             $DeliveryCity<br/>
+                            <% if $DeliveryState %>$DeliveryState<br/><% end_if %>
                             <strong><%t Checkout.PostCode "Post Code" %>:</strong> $DeliveryPostCode<br/>
                             <strong><%t Checkout.Country "Country" %>:</strong> <% if $DeliveryCountryFull %>$DeliveryCountryFull<% else %>$DeliveryCountry<% end_if %>
                         </p>
@@ -76,12 +78,15 @@
                 </div>
             <% end_if %>
         <% end_with %>
+
+        <div class="col-xs-12 col-md-3">
+            <h2><%t Checkout.Payment "Payment" %></h2>
+            <% if $PaymentInfo %>
+                <hr/>
+                $PaymentInfo
+            <% end_if %>
+
+            $Form
+        </div>
     </div>
-
-    <% if $PaymentInfo %>
-        <hr/>
-        $PaymentInfo
-    <% end_if %>
-
-    $Form
 </div>
