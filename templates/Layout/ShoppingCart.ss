@@ -1,4 +1,4 @@
-<% require css('checkout/css/checkout.css') %>
+<% require css('orders/css/checkout.css') %>
 
 <div class="content-container container typography checkout-cart">
     $SessionMessage
