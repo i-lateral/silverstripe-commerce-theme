@@ -10,7 +10,7 @@
                     <div class="col-xs-3">$Image.CroppedImage(45,45)</div>
                     <div class="col-xs-9">
                         <h3 class="h4">$Title</h3>
-                        <p>$Quantity x $Price.Nice</p>
+                        <p>$Quantity x $UnitPrice.Nice</p>
                     </div>
                 </div>
             <% end_loop %>
